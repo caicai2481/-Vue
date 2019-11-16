@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="./libs/vue.min.js"></script>
+	<style>
+		.inner{
+			height: 150px;
+			background-color: aqua
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<div class="inner" @click="divhandg">
+			<input type="button"  value="错他"  @click.stop="divhandg"/>
+		</div>
+		
+	</div>
+	<script>
+		//注意在vm实例中.如果想要获取data中的数据,想要调用methods中的方法,必须通过this来调用
+		var vm = new Vue({
+			el:'#app',
+			data:{
+			
+			},
+			methods:{
+				divhandg(){
+					console.log("触发了div")
+				},
+				divchild(){
+					console.log("触发了input")
+				},
+								
+			
+			}
+		})
+
+	
+	</script>
+</body>
+
+</html>

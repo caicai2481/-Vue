@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		[v-cloak]{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<div id="vue_det">
+    <h1 v-cloak >site : {{site}}</h1>
+	
+<!-- 默认ｄｆｄ二二恶sdsdsdsdsdsdｆｄｆｖ-->
+	<h3 v-text="site"></h3>
+<!-- v-bind:是vue中绑定属性的命令 -->
+<!-- v-bind:命令可以被简写成： -->
+<!-- vue中提供了v-on 事件绑定： -->
+	<input type="button" value="按钮" v-bind:title="mytitle +'------' " v-on:click="show" v-on:mouseover="mouser"/>
+   
+</div>
+<script src="./libs/vue.min.js"></script>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#vue_det',
+		data:{
+			site:"caiaiiai",
+			mytitle:"定义tile"
+		},
+		methods:{//定义方法
+			show(){
+				alert("hello")
+			},
+			mouser:function(){
+				// alert("鼠标")
+			}
+			
+		}
+	})
+</script>
+
+
+</body>
+</html>
