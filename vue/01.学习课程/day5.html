@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../libs/vue.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="app">
+			<div>
+			<input type="text" v-model="first"/>	
+			</div>
+		<div>
+		<input type="text"  v-model="last"/>	
+		</div>
+		<div>
+			{{full}}
+		</div>
+			
+		</div>
+		
+		<script >
+			
+			new Vue({
+				el:'#app',
+				data:{
+					first:'wewe',
+					last:'wewe',
+					full:'wewe'
+					
+				},
+				computed:{
+					reverseString(){
+						return this.msg.split('').reverse().join('')
+					},
+					full2(){
+						return this.first + ""+ this.last
+					}
+				},
+				watch:{
+					first(val){
+						this.full = val +""+this.last
+					},
+					last(val){
+						this.full = val +""+this.first
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

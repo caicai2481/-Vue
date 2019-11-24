@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../libs/vue.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="app">
+			
+			<mycoml></mycoml>
+			
+		</div>
+		
+		<script >
+			
+		//如何使用vue.component 定义全局组件时，如何使用了驼峰命名，使用-进行连接
+			Vue.component('mycoml', Vue.extend({
+				template:'<h3>创建的组件</h3>'//通过templa 属性，指定了组件要展示的内容
+			}))
+			
+			
+			new Vue({
+				el:'#app',
+				data:{
+				
+					
+				}
+				
+			})
+		</script>
+	</body>
+
+</html>
