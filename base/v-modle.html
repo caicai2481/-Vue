@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<script src="./libs/vue.min.js"></script>
+	<script src="../libs/vue.min.js"></script>
 	<style>
 		.inner{
 			height: 150px;
@@ -15,15 +15,15 @@
 
 <body>
 	<div id="app">
-		<h4>{{data}}</h4>
-		<input type="text" name="inputtext" id="inputtext" v-model="data" />
+		<h4>{{data1}}</h4>
+		<input type="text" name="inputtext" id="inputtext" v-model="data1" />
 	</div>
 	<script>
 		//注意在vm实例中.如果想要获取data中的数据,想要调用methods中的方法,必须通过this来调用
 		var vm = new Vue({
 			el:'#app',
 			data:{
-				data:"232323"
+				data1:"232323"
 			
 			},
 			methods:{
